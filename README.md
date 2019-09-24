@@ -19,10 +19,11 @@ Settings will reset when upgrading.
 Access the console to op and whitelist.
 
 Running ftb-revelation data container:
-docker run --name [name of your data container] jonasbonno/ftb-revelation echo 'Data-only container'
+docker run --name [name of your data container] dishcleaner/docker-ftb-revelation echo 'Data-only container'
 
 Running ftb-revelation server:
-docker run --tty=true --interactive=true --detach=true --name=[name of your container] --volumes-from [name of your data container] --publish=[port on your host]:25565 jonasbonno/ftb-revelation
+docker run --tty=true --interactive=true --detach=true --name=[name of your container] --volumes-from [name of your data container] --publish=[port on your host]:25565 dishcleaner/docker-ftb-revelation
+
 
 When upgrading sometime items have been remove and therefor you have to confirm removal. </br>
 To do so run "docker attach [name of your container]" and type "/fml confirm" when prompted to confirm or cancel. </br>
